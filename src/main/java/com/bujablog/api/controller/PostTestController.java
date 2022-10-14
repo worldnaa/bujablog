@@ -43,6 +43,7 @@ public class PostTestController {
         return "Hi";
     }
 
+    /** 다음과 같이 검증 코드를 일일이 쓰는 것은 별로 좋은 방법이 아니다 */
     @PostMapping("post3") //@Valid : 데이터 검증 / BindingResult : 오류의 내용이 담겨온다
     public Map<String, String> post3(@RequestBody @Valid PostTestCreate params, BindingResult result){
         if (result.hasErrors()) {                                      //에러가 있으면
@@ -60,6 +61,7 @@ public class PostTestController {
         map.put("content", params.getContent());
         return map; //java 11이상(?) 에서는 map.of() 지원
     }
+
 
 
 

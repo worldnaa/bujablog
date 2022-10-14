@@ -53,7 +53,7 @@ class PostTestControllerTest {
                 )
                 .andExpect(MockMvcResultMatchers.status().isOk())
                 //jsonPath에 대해 공부하기 (아래는 title의 값이 아래 value 값일 것으로 기대한다)
-                .andExpect(jsonPath("$.title").value("타이틀을 입력해주세요."))
+                .andExpect(jsonPath("$.title").value("타이틀을 입력해주세요.22"))
                 .andDo(MockMvcResultHandlers.print());
     }
 }

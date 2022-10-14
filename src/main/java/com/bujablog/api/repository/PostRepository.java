@@ -1,0 +1,7 @@
+package com.bujablog.api.repository;
+
+import com.bujablog.api.domain.Post;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface PostRepository extends JpaRepository<Post, Long> {
+}
